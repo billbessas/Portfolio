@@ -76,3 +76,12 @@ A suspicious file was discovered on a company web server. The Development team f
 ---
 
 ### 4. Identifying the directory where uploaded files are stored is crucial for locating the vulnerable page and removing any malicious files. Which directory is used by the website to store the uploaded files?
+
+- File was successfully uploaded via `upload.php`
+- Reviewed the server's HTTP response behavior
+- Server returned `303 See Other`, redirecting to `/reviews/uploads/`
+  ![303 Redirect](./screenshots/303.png)
+- Followed this redirect, the uploaded file (`image.jpg.php`) was accessible at that path
+- The website stores uploaded files in the `/reviews/uploads/` directory
+- **Answer** - `/reviews/uploads/`
+
