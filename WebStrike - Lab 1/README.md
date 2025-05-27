@@ -24,9 +24,9 @@ A suspicious file was discovered on a company web server. The Development team f
 
 ---
 
-## 🧠 Summary of Findings
+## Summary of Findings
 
-| 🔎 Question | ✅ Answer |
+| Question | Answer |
 |------------|-----------|
 | **1. City of attack origin** | Tianjin |
 | **2. Attacker's User-Agent** | `Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0` |
@@ -37,9 +37,9 @@ A suspicious file was discovered on a company web server. The Development team f
 
 ---
 
-## 🧭 Walkthrough
+## Walkthrough
 
-### 1️⃣ Attacker’s Geolocation – Tianjin
+### 1. Attacker’s Geolocation – Tianjin
 
 - Used **Wireshark** to analyze IPv4 endpoints  
   ![Endpoints in Wireshark](./images/endpoints-view.png)
@@ -50,7 +50,7 @@ A suspicious file was discovered on a company web server. The Development team f
 
 ---
 
-### 2️⃣ Attacker’s User-Agent
+### 2. Attacker’s User-Agent
 
 - Followed the HTTP stream from the attacker:
   ![HTTP Stream](./images/user-agent-stream.png)
