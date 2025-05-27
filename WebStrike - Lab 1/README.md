@@ -39,7 +39,7 @@ A suspicious file was discovered on a company web server. The Development team f
 
 ## Walkthrough
 
-### 1. Attacker’s Geolocation – Tianjin
+### 1. Identifying the geographical origin of the attack helps in implementing geo-blocking measures and analyzing threat intelligence. From which city did the attack originate?
 
 - Used **Wireshark** to analyze IPv4 endpoints  
   ![Endpoints in Wireshark](./images/endpoints-view.png)
@@ -50,7 +50,7 @@ A suspicious file was discovered on a company web server. The Development team f
 
 ---
 
-### 2. Attacker’s User-Agent
+### 2. Knowing the attacker's User-Agent assists in creating robust filtering rules. What's the attacker's Full User-Agent?
 
 - Followed the HTTP stream from the attacker:
   ![HTTP Stream](./images/user-agent-stream.png)
