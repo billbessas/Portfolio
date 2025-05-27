@@ -61,3 +61,9 @@ A suspicious file was discovered on a company web server. The Development team f
   `Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0`
 - **Answer** - `Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0`
 ---
+
+### 3. We need to determine if any vulnerabilities were exploited. What is the name of the malicious web shell that was successfully uploaded?
+
+- Applied filter:  
+  ```wireshark
+  ip.src == 117.11.88.124 and http.request.method == "POST"
