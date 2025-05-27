@@ -47,7 +47,8 @@ A suspicious file was discovered on a company web server. The Development team f
 - Identified `117.11.88.124` as external attacker IP  
 - Verified geolocation using [ipgeolocation.io](https://ipgeolocation.io)  
   ![GeoIP Lookup Screenshot](./images/ip-geo.png)
-- **Answer** - The attack originated from Tianjin, China.  
+- The attack originated from Tianjin, China
+- **Answer** - Tianjin
 
 ---
 
@@ -56,7 +57,7 @@ A suspicious file was discovered on a company web server. The Development team f
 - Followed the HTTP stream from the attacker:
   ![HTTP Stream](./images/user-agent-stream.png)
 
-- Full User-Agent revealed:  
+- Revealed full User-Agent:  
   `Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0`
-
+- **Answer** - `Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0`
 ---
