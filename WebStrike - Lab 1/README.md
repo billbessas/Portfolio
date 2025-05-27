@@ -6,7 +6,9 @@ A forensic walkthrough of malicious web activity captured via PCAP, analyzed usi
 ## Demo Video
 
 
-[Watch the Demo Video](https://youtu.be/c0VsVmQ7IYs)
+**Demo Video**: 
+
+[Click here to watch on YouTube](https://youtu.be/c0VsVmQ7IYs)
 
 
 
@@ -80,7 +82,7 @@ A suspicious file was discovered on a company web server. The Development team f
 - File was successfully uploaded via `upload.php`
 - Reviewed the server's HTTP response behavior
 - Server returned `301 Moved Permanently`, redirecting to `/reviews/uploads/`
-  ![303 Redirect](./images/301.png)
+  ![301 Redirect](./images/301.png)
 - Followed this redirect, `image.jpg.php` was accessible at that path
 - The website stores uploaded files in the `/reviews/uploads/` directory
 - **Answer** - `/reviews/uploads/`
