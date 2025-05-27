@@ -116,7 +116,7 @@ A suspicious file was discovered on a company web server. The Development team f
 
 ## References
 
-- [CyberDefenders – WebStrike Lab](https://cyberdefenders.org/labs/71)
+- [CyberDefenders – WebStrike Lab](https://cyberdefenders.org/blueteam-ctf-challenges/webstrike/)
 - [Wireshark](https://www.wireshark.org/)
 - [ipgeolocation.io](https://ipgeolocation.io/)
 
