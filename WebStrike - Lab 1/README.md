@@ -67,3 +67,7 @@ A suspicious file was discovered on a company web server. The Development team f
 - Applied filter:  
   ```wireshark
   ip.src == 117.11.88.124 and http.request.method == "POST"
+- Two upload attempts observed:
+  - First failed: `image.php`
+  - Second succeeded: `image.jpg.php`
+    ![Successful Upload](./images/upload-success.png)
