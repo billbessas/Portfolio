@@ -71,3 +71,8 @@ A suspicious file was discovered on a company web server. The Development team f
   - First failed: `image.php`
   - Second succeeded: `image.jpg.php`
     ![Successful Upload](./images/upload-success.png)
+- The attacker successfully bypassed the server's validation by appending .jpg to the filename
+- **Answer** - image.jpg.php
+---
+
+### 4. Identifying the directory where uploaded files are stored is crucial for locating the vulnerable page and removing any malicious files. Which directory is used by the website to store the uploaded files?
