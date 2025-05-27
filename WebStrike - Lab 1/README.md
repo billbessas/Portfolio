@@ -17,9 +17,9 @@ A suspicious file was discovered on a company web server. The Development team f
 
 ## Tools Used
 
-- ** Wireshark** (for full traffic analysis)
-- IP Geolocation services
-- PCAP file provided via Cyber Defenders
+- **Wireshark** (for full traffic analysis)
+- **IP Geolocation** services
+- **PCAP** file provided via Cyber Defenders
 - Markdown and screenshots for documentation
 
 ---
