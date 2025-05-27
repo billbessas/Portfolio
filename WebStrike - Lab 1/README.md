@@ -6,7 +6,7 @@ A forensic walkthrough of malicious web activity captured via PCAP, analyzed usi
 
 ## Demo Video
 
-[![Watch the Demo Video](https://youtu.be/c0VsVmQ7IYs)
+![Watch the Demo Video](https://youtu.be/c0VsVmQ7IYs)
 
 ---
 
