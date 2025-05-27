@@ -80,7 +80,7 @@ A suspicious file was discovered on a company web server. The Development team f
 - File was successfully uploaded via `upload.php`
 - Reviewed the server's HTTP response behavior
 - Server returned `303 See Other`, redirecting to `/reviews/uploads/`
-  ![303 Redirect](./screenshots/303.png)
+  ![303 Redirect](./images/303.png)
 - Followed this redirect, the uploaded file (`image.jpg.php`) was accessible at that path
 - The website stores uploaded files in the `/reviews/uploads/` directory
 - **Answer** - `/reviews/uploads/`
