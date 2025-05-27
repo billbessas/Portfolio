@@ -47,6 +47,7 @@ A suspicious file was discovered on a company web server. The Development team f
 - Identified `117.11.88.124` as external attacker IP  
 - Verified geolocation using [ipgeolocation.io](https://ipgeolocation.io)  
   ![GeoIP Lookup Screenshot](./images/ip-geo.png)
+- **Answer** - The attack originated from Tianjin, China.  
 
 ---
 
