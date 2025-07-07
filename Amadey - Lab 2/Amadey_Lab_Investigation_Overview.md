@@ -15,7 +15,7 @@ This lab simulates an investigation into a Windows machine infected with the Ama
 **Step 1: List Running Processes**
 
 ```bash
-python3 vol.py -f "snapshot4.vmem" windows.pslist
+python3 vol.py -f snapshot4.vmem windows.pslist
 ```
 
 - A suspicious process named `lssass.exe` was observed with PID `2748`.
