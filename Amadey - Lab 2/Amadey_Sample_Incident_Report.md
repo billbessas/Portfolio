@@ -1,9 +1,4 @@
 
----
-
-## `Amadey_Sample_Incident_Documentation.md`
-
-```markdown
 # Incident Report: Amadey Trojan Stealer
 
 **Analyst:** Billy B  
