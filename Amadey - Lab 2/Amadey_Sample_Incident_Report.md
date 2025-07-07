@@ -1,8 +1,8 @@
 
 # Incident Report: Amadey Trojan Stealer
 
-**Analyst:** Billy B  
-**Date:** [Insert Date]  
+**Analyst:** Billy Bessas
+**Date:** 07/07/2025  
 **Image Analyzed:** Windows 7 x64-Snapshot4.vmem  
 **Tool Used:** Volatility 3
 
