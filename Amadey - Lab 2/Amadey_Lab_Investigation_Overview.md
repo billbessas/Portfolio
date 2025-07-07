@@ -2,6 +2,8 @@
 
 This lab simulates an investigation into a Windows machine infected with the Amadey Trojan Stealer. The investigation was conducted using Volatility 3 to analyze a memory dump. The goals included identifying the rogue process, determining how it communicated with its command and control server, identifying downloaded modules, and locating persistence mechanisms.
 
+## Demo Video
+
 **Full Video Walkthrough**: 
 
 [Click here to watch on YouTube](https://www.youtube.com/watch?v=b2Gc33euHG4)
