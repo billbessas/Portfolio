@@ -4,7 +4,7 @@ This lab simulates an investigation into a Windows machine infected with the Ama
 
 **Full Video Walkthrough**: 
 
-[Click here to watch on YouTube]((https://www.youtube.com/watch?v=b2Gc33euHG4))
+[Click here to watch on YouTube](https://www.youtube.com/watch?v=b2Gc33euHG4)
 
 ---
 
