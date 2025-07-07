@@ -1,1 +1,83 @@
 
+---
+
+## `Amadey_Sample_Incident_Documentation.md`
+
+```markdown
+# Incident Report: Amadey Trojan Stealer
+
+**Analyst:** Billy B  
+**Date:** [Insert Date]  
+**Image Analyzed:** Windows 7 x64-Snapshot4.vmem  
+**Tool Used:** Volatility 3
+
+---
+
+## Summary
+
+During routine memory analysis of a suspected compromised Windows 7 machine, a malicious process mimicking `lsass.exe` was identified. Further investigation revealed network activity with an external C2 server, modular payload downloads, and persistence via a scheduled task. These findings are consistent with the behavior of the Amadey Trojan Stealer.
+
+---
+
+## Key Findings
+
+- **Rogue Process Identified:** `lssass.exe` (PID 2748)
+- **Suspicious File Path:**  
+  `C:\Users\0XSH3R~1\AppData\Local\Temp\925e7e99c5\lssass.exe`
+- **C2 IP Contacted:** `41.75.84.12` over port 80
+- **Files Retrieved:** `cred64.dll`, `clip64.dll`
+- **Storage Location:**  
+  `AppData\Roaming\116711e5a2ab05\clip64.dll`
+- **Executed Via:** `rundll32.exe` (child process of lssass.exe)
+- **Persistence Mechanism:**  
+  Scheduled Task created at `\Windows\System32\Tasks\lssass.exe`
+
+---
+
+## Tools & Techniques Used
+
+| Plugin/Tool       | Purpose                                           |
+|-------------------|---------------------------------------------------|
+| `pslist`          | Enumerate running processes                       |
+| `cmdline`         | Retrieve full execution command                   |
+| `netscan`         | Identify external communications                  |
+| `memmap` + `strings` | Dump and extract HTTP requests from memory    |
+| `filescan`        | Locate file artifacts, including persistence paths|
+
+---
+
+## Analysis Summary
+
+The malware exhibited typical Amadey traits:
+
+- **Masquerading** via a process named `lssass.exe`
+- **C2 Communication** over HTTP
+- **Modular Design**, downloading two separate DLLs
+- **Execution through rundll32**, leveraging a trusted Windows binary
+- **Persistence via Task Scheduler**
+
+---
+
+## Recommendations
+
+1. **Terminate and remove** all instances of `lssass.exe`
+2. **Delete DLLs** from AppData and Roaming folders
+3. **Remove scheduled task** registered under `System32\Tasks\lssass.exe`
+4. **Block outbound traffic** to IP `41.75.84.12`
+5. **Scan for lateral movement** or credential theft from clip64/cred64
+6. **Monitor for future rundll32 misuse**
+
+---
+
+## Appendix: Indicators of Compromise (IOCs)
+
+| Type        | Indicator                                                       |
+|-------------|------------------------------------------------------------------|
+| File Name   | lssass.exe                                                      |
+| File Path   | C:\Users\0XSH3R~1\AppData\Local\Temp\925e7e99c5\lssass.exe       |
+| IP Address  | 41.75.84.12                                                     |
+| DLLs        | cred64.dll, clip64.dll                                          |
+| Task Path   | \Windows\System32\Tasks\lssass.exe                               |
+
+---
+
