@@ -15,7 +15,7 @@ This lab simulates an investigation into a Windows machine infected with the Ama
 **Step 1: List Running Processes**
 
 ```bash
-python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.pslist
+python3 vol.py -f "snapshot4.vmem" windows.pslist
 ```
 
 - A suspicious process named `lssass.exe` was observed with PID `2748`.
@@ -29,7 +29,7 @@ python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.pslist
 **Step 2: Extract Command Line Arguments**
 
 ```bash
-python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.cmdline --pid 2748
+python3 vol.py -f snapshot.vmem windows.cmdline --pid 2748
 ```
 
 - Command line revealed the binary path:
@@ -45,7 +45,7 @@ python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.cmdline --pid 2748
 **Step 3: Scan Network Connections**
 
 ```bash
-python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.netscan | grep 2748
+python3 vol.py -f snapshot.vmem windows.netscan | grep 2748
 ```
 
 - Found connections to `41.75.84.12:80`
@@ -60,7 +60,7 @@ python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.netscan | grep 2748
 Malfind and dlllist produced no leads, so memory was dumped instead:
 
 ```bash
-python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.memmap --pid 2748 --dump
+python3 vol.py -f snapshot.vmem windows.memmap --pid 2748 --dump
 strings pid.2748.dmp | grep "GET /"
 ```
 
@@ -79,7 +79,7 @@ strings pid.2748.dmp | grep "GET /"
 **Step 5: Scan for File Artifacts**
 
 ```bash
-python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.filescan | grep -E "cred64|clip64"
+python3 vol.py -f snapshot.vmem windows.filescan | grep -E "cred64|clip64"
 ```
 
 - Found:
@@ -104,7 +104,7 @@ python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.filescan | grep -E "cre
 **Step 7: Investigate Task Scheduler Entries**
 
 ```bash
-python3 vol.py -f "Windows 7 x64-Snapshot4.vmem" windows.filescan | grep -E "lssass"
+python3 vol.py -f snapshot.vmem windows.filescan | grep -E "lssass"
 ```
 
 - Found:
