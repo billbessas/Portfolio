@@ -1,6 +1,6 @@
 # BILLY BESSAS
 Queens, NY || +1‑862‑432‑7345 || <billbessas@gmail.com>
-[LinkedIn](https://linkedin.com/in/billy-bessas) || [GitHub](https://github.com/billbessas/cybersecurity-portfolio)
+[LinkedIn](https://linkedin.com/in/billy-bessas) ||
 
 ---
 
@@ -36,13 +36,6 @@ Entry-level cybersecurity analyst with CompTIA Security+ certification and hands
 - **CompTIA Security+**, 2025
 - **Google Cybersecurity Professional Certificate**, 2024
 - **BFA – Communications**, Penn State University, 2012
-
----
-
-## PORTFOLIO
-[GitHub – github.com/billbessas/cybersecurity-portfolio](https://github.com/billbessas/Portfolio/tree/main/Cybersecurity)
-Projects: Amadey Malware Analysis • WebStrike PCAP Investigation
-(More in progress)
 
 ---
 ## EXPERIENCE
