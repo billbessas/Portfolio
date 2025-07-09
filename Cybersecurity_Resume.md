@@ -40,7 +40,7 @@ Entry-level cybersecurity analyst with CompTIA Security+ certification and hands
 ---
 
 ## PORTFOLIO
-[GitHub – github.com/billbessas/cybersecurity-portfolio](https://github.com/billbessas/cybersecurity-portfolio)
+[GitHub – github.com/billbessas/cybersecurity-portfolio](https://github.com/billbessas/Portfolio/tree/main/Cybersecurity)
 Projects: Amadey Malware Analysis • WebStrike PCAP Investigation
 (More in progress)
 
