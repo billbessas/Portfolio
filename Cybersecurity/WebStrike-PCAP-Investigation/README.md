@@ -1,5 +1,5 @@
 
-# WebStrike - Lab 1: Investigating a Suspicious File Upload
+# WebStrike PCAP Investigation Lab
 
 This project is a forensic walkthrough of malicious web activity captured via a PCAP file. The goal was to identify attacker behavior, uncover exploited vulnerabilities, and determine the scope of unauthorized access through traffic analysis.
 
