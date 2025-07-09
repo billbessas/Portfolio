@@ -34,5 +34,5 @@ Hands-on simulations in system hardening, endpoint protection, and real-world tr
 
 ---
 
-📄 [View My Resume](https://yourlink.com/resume.pdf)
-📬 [Connect on LinkedIn](https://linkedin.com/in/billy-bessas)
+[View My Resume](https://yourlink.com/resume.pdf)  
+[Connect on LinkedIn](https://linkedin.com/in/billy-bessas)
