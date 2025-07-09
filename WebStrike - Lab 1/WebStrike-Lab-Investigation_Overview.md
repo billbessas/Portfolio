@@ -8,7 +8,7 @@ A forensic walkthrough of malicious web activity captured via PCAP, analyzed usi
 
 **Full Video Walkthrough**: 
 
-[Click here to watch on YouTube](https://youtu.be/c0VsVmQ7IYs)]
+[Click here to watch on YouTube](https://youtu.be/c0VsVmQ7IYs)
 
 
 
@@ -115,6 +115,13 @@ A suspicious file was discovered on a company web server. The Development team f
 - How reverse shells exploit outbound connections
 - Role of User-Agent and IP analysis in filtering and threat intel
 ---
+
+## Key Takeaways
+
+- Developed comfort navigating raw PCAPs in Wireshark to track attacker behavior
+- Gained hands-on experience identifying file upload vulnerabilities and reverse shell tactics
+- Practiced translating technical findings into IR-style documentation with real-world relevance
+
 
 ## References
 
