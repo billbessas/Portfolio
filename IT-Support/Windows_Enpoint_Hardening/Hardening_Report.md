@@ -1,10 +1,10 @@
-# 🛡️ Hardening Report — Windows 11 Endpoint
+# Hardening Report — Windows 11 Endpoint
 
 This report documents the technical steps taken to harden a default Windows 11 Pro system in a virtual lab. Actions were selected to improve local account control, enforce least privilege, implement basic password policy hygiene, and simulate real-world defense-in-depth principles. Each step includes rationale, implementation, and verification details.
 
 ---
 
-## 🧾 Before vs. After Summary
+## Before vs. After Summary
 
 | Category              | Before                         | After                          |
 |-----------------------|--------------------------------|--------------------------------|
@@ -19,9 +19,9 @@ This report documents the technical steps taken to harden a default Windows 11 P
 
 ---
 
-## 🔐 Account Control
+## Account Control
 
-### ✅ Renamed Default Administrator Account
+### Renamed Default Administrator Account
 - **Why:** Obfuscates a high-value target account frequently exploited by attackers
 - **Command:**
   ```powershell
@@ -31,7 +31,7 @@ This report documents the technical steps taken to harden a default Windows 11 P
   ```powershell
   net user
   ```  
-  📸 `images/net_user_after.png`
+  `images/net_user_after.png`
 
 ---
 
@@ -46,7 +46,7 @@ This report documents the technical steps taken to harden a default Windows 11 P
   net user Guest
   ```  
   Look for `Account active: No`  
-  k`images/guest_account_disabled.png`
+  `images/guest_account_disabled.png`
 
 ---
 
