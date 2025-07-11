@@ -1,4 +1,4 @@
-# Windows Endpoint Hardening Lab (IT Support)
+# Windows Endpoint Hardening Lab
 
 This project demonstrates foundational endpoint security tasks performed in Windows 11 Pro — including account management, Group Policy configuration, and system auditing — all from the perspective of a desktop support or help desk technician.
 
