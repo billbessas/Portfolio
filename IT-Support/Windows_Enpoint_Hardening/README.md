@@ -54,5 +54,5 @@ This lab reflects core elements of:
 ## Full Documentation
 
 See the full hardening walkthrough here:  
-[Hardening_Report.md](/Hardening_Report.md)
+[Hardening_Report.md](/IT-Support/Windows_Enpoint_Hardening/Hardening_Report.md)
 
