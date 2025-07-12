@@ -60,9 +60,8 @@ This report documents the technical steps taken to harden a default Windows 11 P
   net localgroup Administrators TestUser /delete
   ```
 - **Verification:** Group membership before/after  
-  `images/user_group_membership_before.png`  
-  `images/user_group_membership_after.png`
-
+ ![Users](./images/users.png)
+ ![Users Group](./images/users_group.png)
 ---
 
 ## Password Policy
