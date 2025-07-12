@@ -74,7 +74,7 @@ This report documents the technical steps taken to harden a default Windows 11 P
 - **Max age:** left at default (42 days)
 - **How:**  
   `gpedit.msc → Computer Configuration → Windows Settings → Security Settings → Account Policies → Password Policy`  
-- 📸 `images/password_policy_after.png`
+ ![Disable Guest](./images/gpo_password_policy_after.png)
 
 ---
 
