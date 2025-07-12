@@ -81,8 +81,17 @@ This report documents the technical steps taken to harden a default Windows 11 P
 
 ### Enabled Password Length Auditing
 - **What:** Set `Minimum password length audit` to `16`
-- **Why:** Allows auditing before enforcing stricter policy
-- included with password policy screenshot
+- **Why:** This setting allows the system to log when users create or change passwords shorter than 16 characters, without enforcing that as a hard limit. It’s useful for gathering insight into current password behaviors before raising requirements.
+
+By auditing rather than enforcing, admins can:
+
+    Measure compliance risk before a policy shift
+
+    Avoid user disruption from sudden lockouts
+
+    Phase in stronger password policies with data to back them up
+
+In this lab, the enforced minimum is 12 characters, but the audit flag at 16 helps simulate how an organization might evaluate readiness for a more secure standard.
 
 ---
 
