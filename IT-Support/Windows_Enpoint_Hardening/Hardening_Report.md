@@ -46,7 +46,12 @@ This report documents the technical steps taken to harden a default Windows 11 P
   net user Guest
   ```  
   Look for `Account active: No`  
+<details>
+  <summary>Click to view screenshot</summary>
+
  ![Disable Guest](./images/disable_guest.png)
+
+</details>
 
 ---
 
