@@ -74,7 +74,8 @@ This report documents the technical steps taken to harden a default Windows 11 P
 - **Max age:** left at default (42 days)
 - **How:**  
   `gpedit.msc → Computer Configuration → Windows Settings → Security Settings → Account Policies → Password Policy`  
-![Disable Guest](./images/gpo_password_policy_before.png), ![Disable Guest](./images/gpo_password_policy_after.png)
+![Disable Guest](./images/gpo_password_policy_before.png)
+![Disable Guest](./images/gpo_password_policy_after.png)
 
 ---
 
@@ -108,7 +109,8 @@ This report documents the technical steps taken to harden a default Windows 11 P
 - **Why:** Ensures elevation prompts appear for all privileged actions
 - **How:**  
   `Control Panel → User Accounts → Change User Account Control settings`
-- `images/uac_before.png`, `images/uac_after.png`
+  ![Disable Guest](./images/uac_before.png)
+  ![Disable Guest](./images/uac_after.png)
 
 ---
 
