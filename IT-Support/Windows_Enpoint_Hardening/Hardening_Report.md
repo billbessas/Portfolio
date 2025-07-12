@@ -31,7 +31,7 @@ This report documents the technical steps taken to harden a default Windows 11 P
   ```powershell
   net user
   ```  
-  `images/net_user_after.png`
+  `images/admin_rename.png`
 
 ---
 
