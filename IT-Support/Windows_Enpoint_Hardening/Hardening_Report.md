@@ -140,15 +140,14 @@ Audit categories specific to domain infrastructure or high-noise object tracking
 
 ![Audit Policy](./images/audit_policy_configured.png)
 
----
-
-## Simulated Payload Test (Before vs. After)
+--- 
+##Simulated Payload Test (Before vs. After)
 
 ### Purpose
-To demonstrate the impact of user privilege and UAC on potentially malicious PowerShell execution, simulating initial access tactics commonly seen in real-world attacks.
+To evaluate how user privilege separation and UAC enforcement affect the execution of a potentially malicious PowerShell script — simulating an initial access attempt commonly observed in real-world attacks.
 
 ### Method
-Created a harmless but suspicious PowerShell script:
+A harmless PowerShell script was created to mimic suspicious behavior — including a staged outbound HTTP request:
 
 ```powershell
 # fake-malware.ps1
@@ -158,20 +157,60 @@ Invoke-WebRequest http://malicious.example.com -UseBasicParsing
 Write-Output "Payload delivered."
 ```
 
+The domain was intentionally unreachable to simulate a network failure and keep the test safe while demonstrating behavior.
+
+---
+
 ### Before Hardening
-- Executed as built-in Admin user
-- Ran silently, made outbound request without prompt
-- `images/fake_payload_admin_exec.png`
 
-### 🛡️ After Hardening
-- Ran as standard user with UAC enforced
-- Blocked or triggered elevation prompt
-- Prevented web request due to lack of admin rights
-- `images/fake_payload_blocked_standard_user.png`
+- Executed under the built-in **administrator account**
+- PowerShell **execution policy was bypassed**
+- Script ran without restrictions or UAC prompt
+- Outbound web request was attempted (DNS resolution failed, as expected)
+- Ran with **full administrative privileges**, which in a real-world scenario would allow system compromise
 
-### ATT&CK Mapping:
+![Admin Exec](./images/fake_payload_admin_exec.png)
+
+---
+
+### After Hardening
+
+- Executed under a **standard (non-admin) user account**
+- PowerShell execution policy was still bypassed, but UAC **did not trigger**, since elevation was not requested
+- The script ran and failed at the same network call, but this time:
+  - It was **confined to a restricted user context**
+  - **Could not modify system settings**, install software, or affect other users
+- Demonstrated **least privilege containment** even when execution wasn’t explicitly blocked
+
+![Standard Exec](./images/fake_standard_user_exec.png)
+
+---
+
+### Key Difference
+
+While both script executions produced similar output, the **after-hardening test limited the potential damage** by enforcing least privilege. In a real-world attack, the same script might install malware or alter system settings — but with these controls in place, its impact is sharply reduced.
+
+---
+
+## Lessons Learned
+
+- **Least privilege is the first line of containment.** Even though the payload executed, the fact that it ran under a non-admin account prevented it from making system-level changes — a real-world win in endpoint security.
+
+- **UAC and account separation work best in tandem.** The lack of a UAC prompt under a standard user account reinforced that elevation boundaries were respected and that no silent privilege escalation occurred.
+
+- **Not all threats are loud.** The script didn't cause visible damage, but its behavior still demonstrated tactics used in early-stage attacks — highlighting the value of controlling even “minor” execution pathways.
+
+- **Documentation turns small wins into big signals.** While this test didn’t result in blocked execution, the act of tracing, isolating, and interpreting system response proved the machine was hardened against real risks.
+
+- **Successful hardening often feels uneventful.** The best security controls are invisible when working correctly — they don’t block productivity, but quietly prevent escalation and system compromise behind the scenes.
+
+---
+
+### 🗂️ ATT&CK Mapping
+
 - `T1059` – Command and Scripting Interpreter  
 - `T1204` – User Execution
+
 
 ---
 
