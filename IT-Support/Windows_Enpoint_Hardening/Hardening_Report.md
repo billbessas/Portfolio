@@ -74,8 +74,8 @@ This report documents the technical steps taken to harden a default Windows 11 P
 - **Max age:** left at default (42 days)
 - **How:**  
   `gpedit.msc → Computer Configuration → Windows Settings → Security Settings → Account Policies → Password Policy`  
-![Disable Guest](./images/gpo_password_policy_before.png)
-![Disable Guest](./images/gpo_password_policy_after.png)
+![Password Before](./images/gpo_password_policy_before.png)
+![Password After](./images/gpo_password_policy_after.png)
 
 ---
 
@@ -109,23 +109,36 @@ This report documents the technical steps taken to harden a default Windows 11 P
 - **Why:** Ensures elevation prompts appear for all privileged actions
 - **How:**  
   `Control Panel → User Accounts → Change User Account Control settings`
-  ![Disable Guest](./images/uac_before.png)
-  ![Disable Guest](./images/uac_after.png)
+  ![UAC Before](./images/uac_before.png)
+  ![UAC After](./images/uac_after.png)
 
 ---
 
 ## Audit Policy Configuration
 
-### Enabled Basic Security Auditing
-- **Enabled policies:**
-  - `Audit logon events`
-  - `Audit privilege use`
-  - `Audit process tracking`
-  - `Audit object access`
-- **Why:** Provides visibility into login behavior, permission use, and program execution
-- **How:**  
-  `gpedit.msc → Security Settings → Local Policies → Audit Policy`
-- `images/audit_policy_configured.png`
+### Enabled Local Security Audit Policies
+
+Audit settings were applied to monitor key system and account-level activities on a standalone Windows 11 Pro machine. These policies support incident detection, troubleshooting, and accountability — particularly around user authentication, privilege use, and system changes.
+
+The following audit categories were enabled:
+
+| Policy               | Setting           | Purpose |
+|----------------------|-------------------|---------|
+| **Account logon events** | Success, Failure | Tracks authentication attempts using local or cached credentials (e.g., RDP, remote access). |
+| **Account management**   | Success           | Captures user and group account creation, deletion, renaming, and password resets. |
+| **Logon events**         | Success, Failure | Monitors interactive, network, and remote desktop logons. |
+| **Policy change**        | Success           | Logs changes to audit policies, trust settings, or user rights assignments. |
+| **Privilege use**        | Failure           | Detects attempts to use sensitive privileges without authorization. |
+| **Process tracking**     | Success           | Records process creation and termination events — useful for tracing script or payload execution. |
+| **System events**        | Success           | Logs system startups, shutdowns, crashes, and security log tampering. |
+
+### Notes
+
+Audit events were selected to balance signal-to-noise and reflect real-world audit baselines aligned with CIS and NIST guidance. This configuration provides foundational visibility for a Tier 1 or Tier 2 support environment, without overwhelming log volume.
+
+Audit categories specific to domain infrastructure or high-noise object tracking (such as Directory Service Access and Object Access) were intentionally excluded, as they are not relevant to this standalone lab and would add unnecessary complexity without benefit.
+
+![Audit Policy](./images/audit_policy_configured.png)
 
 ---
 
