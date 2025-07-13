@@ -182,7 +182,7 @@ The domain was intentionally unreachable to simulate a network failure and keep 
   - **Could not modify system settings**, install software, or affect other users
 - Demonstrated **least privilege containment** even when execution wasn’t explicitly blocked
 
-![Standard Exec](./images/fake_standard_user_exec.png)
+![Standard Exec](./images/fake_payload_standard_user_exec.png)
 
 ---
 
