@@ -141,7 +141,7 @@ Audit categories specific to domain infrastructure or high-noise object tracking
 ![Audit Policy](./images/audit_policy_configured.png)
 
 --- 
-##Simulated Payload Test (Before vs. After)
+## Simulated Payload Test (Before vs. After)
 
 ### Purpose
 To evaluate how user privilege separation and UAC enforcement affect the execution of a potentially malicious PowerShell script — simulating an initial access attempt commonly observed in real-world attacks.
