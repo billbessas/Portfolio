@@ -194,19 +194,16 @@ While both script executions produced similar output, the **after-hardening test
 
 ## Lessons Learned
 
-- **Least privilege is the first line of containment.** Even though the payload executed, the fact that it ran under a non-admin account prevented it from making system-level changes — a real-world win in endpoint security.
+- **Privilege limits power.** Running the script as a standard user contained its reach, preventing system-level changes.
 
-- **UAC and account separation work best in tandem.** The lack of a UAC prompt under a standard user account reinforced that elevation boundaries were respected and that no silent privilege escalation occurred.
+- **UAC boundaries held.** No escalation occurred without explicit consent, confirming elevation controls are effective.
 
-- **Not all threats are loud.** The script didn't cause visible damage, but its behavior still demonstrated tactics used in early-stage attacks — highlighting the value of controlling even “minor” execution pathways.
+- **Silent behavior is still risky.** Even non-destructive scripts reflect real attacker techniques and warrant attention.
 
-- **Documentation turns small wins into big signals.** While this test didn’t result in blocked execution, the act of tracing, isolating, and interpreting system response proved the machine was hardened against real risks.
-
-- **Successful hardening often feels uneventful.** The best security controls are invisible when working correctly — they don’t block productivity, but quietly prevent escalation and system compromise behind the scenes.
-
+- **Small changes, big defense.** Simple controls like user separation and UAC meaningfully reduce exposure.
 ---
 
-### 🗂️ ATT&CK Mapping
+### ATT&CK Mapping
 
 - `T1059` – Command and Scripting Interpreter  
 - `T1204` – User Execution
