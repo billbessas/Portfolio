@@ -34,5 +34,5 @@ Hands-on simulations in system hardening, endpoint protection, and real-world tr
 
 ---
 
-[View My Resume](https://yourlink.com/resume.pdf)  
+Download Cybersecurity Resume (PDF)](https://github.com/billbessas/Portfolio/blob/main/Cybersecurity/billy_bessas_cybersecurity_resume.pdf)
 [Connect on LinkedIn](https://linkedin.com/in/billy-bessas)
