@@ -20,7 +20,7 @@ Analyze a captured network packet file (PCAP) to:
 
 ## Documentation
 
-- [Investigation Summary](WebStrike-Lab-Investigation_Overview.md)  
+- [Investigation Overview](WebStrike-Lab-Investigation_Overview.md)  
 - [Video Walkthrough on YouTube](https://youtu.be/c0VsVmQ7IYs)
 
 ## MITRE ATT&CK Techniques Observed
