@@ -6,7 +6,7 @@ These projects are designed to reflect real-world help desk and desktop support 
 
 ## Projects
 
-- [Windows Endpoint Hardening](Windows-Endpoint-Hardening) *(in progress)*  
+- [Windows Endpoint Hardening](Windows-Endpoint-Hardening)
   Simulating security hardening of a Windows 10 system through group policies, service configuration, user restrictions, and firewall adjustments.
 
 (Additional labs coming soon: DNS troubleshooting, user onboarding simulations, and ticket triage exercises.)
