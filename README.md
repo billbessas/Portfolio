@@ -18,7 +18,7 @@ Focused on threat analysis, malware behavior, and Blue Team practices.
 ### [IT Support Labs](IT-Support/)
 Hands-on simulations in system hardening, endpoint protection, and real-world troubleshooting.
 
-- [Windows Endpoint Hardening](IT-Support/Windows-Endpoint-Hardening) *(in progress)*
+- [Windows Endpoint Hardening](IT-Support/Windows_Enpoint_Hardening) 
 
 ---
 
