@@ -2,7 +2,7 @@
 
 This folder contains hands-on security labs focused on threat detection, malware behavior analysis, PCAP forensics, and incident response.
 
-All labs are based on real-world scenarios and include detailed documentation using tools like Wireshark, CyberChef, Regshot, VirusTotal, and the MITRE ATT&CK framework.
+All labs are based on real-world scenarios and include detailed documentation using tools like Wireshark, Any.Run, VirusTotal, and the MITRE ATT&CK framework.
 
 ## Projects
 
