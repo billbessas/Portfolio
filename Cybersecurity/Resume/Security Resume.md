@@ -1,6 +1,5 @@
 # BILLY BESSAS
-Queens, NY || +1‑862‑432‑7345 || <billbessas@gmail.com>
-[LinkedIn](https://linkedin.com/in/billy-bessas) || [GitHub](https://github.com/billbessas/Portfolio/tree/main/Cybersecurity)
+Queens, NY || +1‑862‑432‑7345 || <billbessas@gmail.com> || [LinkedIn](https://linkedin.com/in/billy-bessas) 
 
 ---
 
