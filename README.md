@@ -24,8 +24,7 @@ Hands-on simulations in system hardening, endpoint protection, and real-world tr
 
 ## Tools & Topics Covered
 
-- Wireshark  
-- Regshot  
+- Wireshark
 - VirusTotal  
 - MITRE ATT&CK  
 - Windows Sandbox  
