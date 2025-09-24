@@ -31,12 +31,6 @@ Technical support professional with CompTIA Security+ and Google Cybersecurity c
 
 - Simulated attack using PowerShell payload to demonstrate containment via user privilege separation
 
-### Network Troubleshooting Practice – *Self-Directed | 2025*
--> 2025
-- Used Wireshark to trace DNS resolution failures and identify packet loss issues
-- Built a home lab with switch, router, and endpoints to practice subnetting, IP conflict resolution, and connectivity testing  
-- Logged findings in a simulated support ticket system (Notion) to document process and escalation points
-
 ---
 ## CERTIFICATIONS & EDUCATION
 - **CompTIA Security+**, 2025
