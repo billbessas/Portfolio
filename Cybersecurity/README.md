@@ -14,8 +14,7 @@ All labs are based on real-world scenarios and include detailed documentation us
 
 ## Tools
 
-- Wireshark  
-- Regshot  
+- Wireshark   
 - VirusTotal  
 - Any.Run  
 - MITRE ATT&CK  
