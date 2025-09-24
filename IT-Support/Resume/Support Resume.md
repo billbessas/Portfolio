@@ -21,7 +21,7 @@ Technical support professional with CompTIA Security+ and Google Cybersecurity c
 
 ## RELEVANT PROJECTS
 
-### Windows Endpoint Hardening Lab – *Self-Directed | 2025* 
+### Windows Endpoint Hardening Lab – *2025* - [GitHub](https://github.com/billbessas/Portfolio/tree/main/IT-SUpport/Windows_Endpoint_Hardening)
 
 - Hardened Windows 11 Pro endpoint by disabling guest account, renaming admin, and enforcing least privilege
 
